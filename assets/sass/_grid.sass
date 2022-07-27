@@ -1,0 +1,66 @@
+/* Grid */
+.nav
+    grid-area: navbar
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    position: relative
+    width: 100%
+
+.head
+    grid-area: header
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    background-image: url(../../assets/images/voiture-verte.jpg)
+
+.head>div
+    width: 100%
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+
+.main
+    grid-area: mainer
+
+.footer
+    grid-area: footer
+    background-image: url(../../assets/images/voiture-blanche.jpg)
+    background-size: cover
+    background-position: center
+    height: 250px
+    display: flex
+    justify-content: space-around
+
+.foot-left
+    width: 50%
+    height: 250px
+
+    display: flex
+    justify-content: space-around
+
+.foot-right
+    width: 50%
+    height: 250px
+
+body
+    padding: 0
+    margin: 0
+    display: grid
+    grid-template-rows: 7vh 50vh auto auto 250px
+    grid-template-columns: repeat(4, 25%)
+    grid-template-areas: "navbar navbar navbar navbar""header header header header""mainer mainer mainer mainer""contact contact contact contact""footer footer footer footer"
+
+.title
+    padding-left: 1em
+    display: flex
+    height: 7vh
+    align-self: center
+    justify-content: left
+
+.grid
+    display: grid
+    gap: 10px
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr))
+    grid-template-rows: masonry
